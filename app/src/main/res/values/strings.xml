@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AdSnippet</string>
+
+    <!-- AdMob -->
+    <string name="admob_banner">Check out this AdMob banner!</string>
+
+    <!-- screen labels -->
+    <string name="label_admob">AdMob</string>
 </resources>
