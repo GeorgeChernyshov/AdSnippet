@@ -8,7 +8,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.adsnippet.navigation.Screen
-import com.example.adsnippet.screen.AdMobScreen
+import com.example.adsnippet.screen.AdBannerScreen
+import com.example.adsnippet.screen.AdInterstitialScreen
 import com.example.adsnippet.theme.AdSnippetTheme
 import com.google.android.gms.ads.MobileAds
 
@@ -29,9 +30,19 @@ class MainActivity : ComponentActivity() {
         AdSnippetTheme {
             NavHost(
                 navController = navController,
-                startDestination = Screen.AdMob
+                startDestination = Screen.AdMobBanner
             ) {
-                composable<Screen.AdMob> { AdMobScreen() }
+                composable<Screen.AdMobBanner> {
+                    AdBannerScreen(
+                        onNextClick = {
+                            navController.navigate(Screen.AdMobInterstitial)
+                        }
+                    )
+                }
+
+                composable<Screen.AdMobInterstitial> {
+                    AdInterstitialScreen(this@MainActivity)
+                }
             }
         }
     }

@@ -8,8 +8,14 @@ import kotlinx.serialization.Serializable
 sealed class Screen(val route: String, @StringRes val resourceId: Int) {
 
     @Serializable
-    data object AdMob : Screen(
-        route = "adMob",
-        resourceId = R.string.label_admob
+    data object AdMobBanner : Screen(
+        route = "adMobBanner",
+        resourceId = R.string.label_admob_banner
+    )
+
+    @Serializable
+    data object AdMobInterstitial : Screen(
+        route = "adMobInterstitial",
+        resourceId = R.string.label_admob_interstitial
     )
 }

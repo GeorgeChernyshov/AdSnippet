@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">AdSnippet</string>
 
+    <string name="button_next">Next</string>
+
     <!-- AdMob -->
-    <string name="admob_banner">Check out this AdMob banner!</string>
+    <string name="admob_banner">Check out this AdMob banner below!</string>
+    <string name="admob_interstitial_hint">Press this button to see a new, even cooler ad!</string>
+    <string name="admob_interstitial_hint_after">That was a nice ad, wasn\'t it?</string>
 
     <!-- screen labels -->
-    <string name="label_admob">AdMob</string>
+    <string name="label_admob_banner">AdMob Banner</string>
+    <string name="label_admob_interstitial">AdMob Interstitial</string>
 </resources>
