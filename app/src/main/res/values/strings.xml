@@ -4,6 +4,7 @@
     <string name="button_next">Next</string>
 
     <!-- AdMob -->
+    <string name="admob_app_open_hint">Leave the app and reopen it to see another great ad!</string>
     <string name="admob_banner">Check out this AdMob banner below!</string>
     <string name="admob_interstitial_hint">Press this button to see a new, even cooler ad!</string>
     <string name="admob_interstitial_hint_after">That was a nice ad, wasn\'t it?</string>

@@ -51,4 +51,5 @@ dependencies {
 
     //ads
     implementation(libs.play.services.ads)
+    implementation(libs.androidx.lifecycle.process)
 }

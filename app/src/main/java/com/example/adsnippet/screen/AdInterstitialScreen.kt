@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -68,15 +69,21 @@ fun AdInterstitialScreen(
         )
     }
 
-    Column(
+    Scaffold(
         modifier = Modifier
             .fillMaxSize()
-            .safeDrawingPadding()
-            .padding(horizontal = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        AppBar(name = stringResource(R.string.label_admob_interstitial))
-        Text(stringResource(R.string.admob_interstitial_hint_after))
+            .safeDrawingPadding(),
+        topBar = { AppBar(name = stringResource(R.string.label_admob_interstitial)) }
+    ) { paddingValues ->
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .padding(paddingValues)
+            .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Text(stringResource(R.string.admob_interstitial_hint_after))
+            Text(stringResource(R.string.admob_app_open_hint))
+        }
     }
 }
 
