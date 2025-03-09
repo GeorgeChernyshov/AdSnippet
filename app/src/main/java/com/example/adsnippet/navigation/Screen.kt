@@ -18,4 +18,10 @@ sealed class Screen(val route: String, @StringRes val resourceId: Int) {
         route = "adMobInterstitial",
         resourceId = R.string.label_admob_interstitial
     )
+
+    @Serializable
+    data object AdMobNative : Screen(
+        route = "adMobNative",
+        resourceId = R.string.label_admob_native
+    )
 }

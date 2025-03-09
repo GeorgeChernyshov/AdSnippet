@@ -5,8 +5,10 @@ import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,7 +32,8 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 
 @Composable
 fun AdInterstitialScreen(
-    mainActivity: Activity
+    mainActivity: Activity,
+    onNextClick: () -> Unit
 ) {
     val context = LocalContext.current
 
@@ -83,6 +86,14 @@ fun AdInterstitialScreen(
         ) {
             Text(stringResource(R.string.admob_interstitial_hint_after))
             Text(stringResource(R.string.admob_app_open_hint))
+            Text(stringResource(R.string.admob_native_hint))
+
+            Button(
+                onClick = onNextClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(stringResource(R.string.button_next))
+            }
         }
     }
 }

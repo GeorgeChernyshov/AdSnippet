@@ -8,8 +8,11 @@
     <string name="admob_banner">Check out this AdMob banner below!</string>
     <string name="admob_interstitial_hint">Press this button to see a new, even cooler ad!</string>
     <string name="admob_interstitial_hint_after">That was a nice ad, wasn\'t it?</string>
+    <string name="admob_native_hint">Press this button to see native ads!</string>
+    <string name="admob_native_small">Here is a small native ad</string>
 
     <!-- screen labels -->
     <string name="label_admob_banner">AdMob Banner</string>
     <string name="label_admob_interstitial">AdMob Interstitial</string>
+    <string name="label_admob_native">AdMob Native</string>
 </resources>

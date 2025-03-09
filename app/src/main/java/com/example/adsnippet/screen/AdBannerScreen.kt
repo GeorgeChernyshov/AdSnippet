@@ -53,7 +53,10 @@ fun AdBannerScreen(onNextClick: () -> Unit) {
 
             Text(stringResource(R.string.admob_interstitial_hint))
 
-            Button(onClick = onNextClick) {
+            Button(
+                onClick = onNextClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
                 Text(stringResource(R.string.button_next))
             }
         }
